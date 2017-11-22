@@ -19,7 +19,7 @@
     padding:15px;
 }
 
-/*主页样式*/
+
 html,body{
     height: 100%;
 }
@@ -27,6 +27,11 @@ a:link,a:visited,a:hover,a:active{
     text-decoration: none;
 }
 
+.mb_15{
+    margin-bottom: 15px;
+}
+
+/*主页样式*/
 .lt-slide{
     width: 180px;
     height: 100%;
