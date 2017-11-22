@@ -6,6 +6,7 @@
     <title>后台管理系统-用户管理</title>
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
+    <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.css">
     <link rel="stylesheet" href="./css/common.css">
 </head>
 <body>
@@ -63,15 +64,30 @@
                 </ol>
             </div>
             <div class="main-content clearfix">
-                <div class="bar"></div>
-                <div class="pie"></div>
+                <table class="table v_middle table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <th width=10%>序号</th>
+                        <th width=30%>用户名</th>
+                        <th width=30%>手机号</th>
+                        <th width=20%>状态</th>
+                        <th width=10%>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <!--模板引擎-->
+                    </tbody>
+                </table>
+                <div class="for-page text-right">
+                    <ul id="paginator"></ul>
+                </div>
             </div>
         </div>
     </div>
 
 
     <!--模态框-->
-    <div class="modal fade" id="myModal" style="display: none">
+    <div class="modal fade" id="userModal" style="display: none">
         <div class="modal-dialog modal-sm ">
             <div class="modal-content">
                 <div class="modal-header">
@@ -81,22 +97,45 @@
                 <div class="modal-body">
                     <p class="text-danger">
                         <i class="glyphicon glyphicon-info-sign"></i>
-                        您确定要退出后台管理系统吗？
+                        您确定执行此操作吗？
                     </p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-primary btn-loginout">确定</button>
+                    <button type="button" class="btn btn-primary btn-userout">确定</button>
                 </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+            </div>
+        </div>
+    </div>
+
+
+<!--模板引擎-->
+<script type="text/html" id="tpl">
+    {{each rows v i}}
+    <tr>
+        <td>{{ ((page-1)*size) + i + 1 }}</td>
+        <td>{{v.username}}</td>
+        <td>{{v.mobile}}</td>
+        <td>{{ v.isDelete == 1 ? "正常":"禁用" }}</td>
+        <td data-id="{{v.id}}">
+            {{if v.isDelete == 0}}
+            <button class="btn btn-sm btn-danger">禁用</button>
+            {{/if}}
+            {{if v.isDelete == 1}}
+            <button class="btn btn-sm btn-success">启用</button>
+            {{/if}}
+        </td>
+    </tr>
+    {{/each}}
+</script>
 
 <script src="./lib/jquery/jquery.js"></script>
 <script src="./lib/bootstrap/js/bootstrap.js"></script>
 <script src="./lib/nprogress/nprogress.js"></script>
-<script src="./lib/echarts/echarts.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/bootstrap-validator/js/bootstrapValidator.js"></script>
+<script src="./lib/bootstrap-paginator/bootstrap-paginator.js"></script>
 <script src="./js/common.js"></script>
-<!--<script src="./js/user.js"></script>-->
+<script src="./js/user.js"></script>
 </body>
 </html>

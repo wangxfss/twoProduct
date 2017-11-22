@@ -124,3 +124,13 @@ a:link,a:visited,a:hover,a:active{
     height: 400px;
 }
 
+
+/*用户系统的样式*/
+table td,
+table th{
+    text-align: center;
+}
+table.table.v_middle td{
+    vertical-align: middle;
+}
+
