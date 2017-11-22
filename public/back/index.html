@@ -3,8 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <title>后台管理系统-首页</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
+    <link rel="stylesheet" href="./css/common.css">
 </head>
 <body>
+    <div class="lt-slide">
+        <div class="brand">
+            <a href="index.html">ITCAST</a>
+        </div>
+        <div class="user">
+            <a href="javascript:;">
+                <img src="./images/default.png" alt="">
+                超级会员
+            </a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="user.html">
+                        <i class="glyphicon glyphicon-user"></i>
+                        <span>用户管理</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <i class="glyphicon glyphicon-list"></i>
+                        <span>分类管理</span>
+                    </a>
+                    <div class="child" style="display: none">
+                        <a href="first.html" class="first">一级分类</a>
+                        <a href="second.html" class="second">二级分类</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="product">
+                        <i class="glyphicon glyphicon-tags"></i>
+                        <span>商品管理</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="lt-main">
+        <div class="topbar">
+            <a href="javascript:;" class="pull-left topbar-left">
+                <i class="glyphicon glyphicon-align-justify"></i>
+            </a>
+            <a href="javascript:;" class="pull-right topbar-right">
+                <i class="glyphicon glyphicon-log-out"></i>
+            </a>
+        </div>
+        <div class="container-fluid">
+            <div class="crumb">
+                <ol class="breadcrumb">
+                    <li><a href="#">管理系统</a></li>
+                    <li class="active">首页</li>
+                </ol>
+            </div>
+            <div class="main-content clearfix">
+                <div class="bar"></div>
+                <div class="pie"></div>
+            </div>
+        </div>
+    </div>
 
+<<<<<<< HEAD
+=======
+
+    <!--模态框-->
+    <div class="modal fade" id="myModal" style="display: none">
+        <div class="modal-dialog modal-sm ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">温馨提示</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="text-danger">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                        您确定要退出后台管理系统吗？
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary btn-loginout">确定</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+<script src="./lib/jquery/jquery.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.js"></script>
+<script src="./lib/nprogress/nprogress.js"></script>
+<script src="./lib/echarts/echarts.min.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/index.js"></script>
+>>>>>>> index
 </body>
 </html>
