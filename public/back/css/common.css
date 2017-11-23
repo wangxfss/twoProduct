@@ -139,3 +139,18 @@ table.table.v_middle td{
     vertical-align: middle;
 }
 
+
+/*二级分类*/
+
+.second_sub{
+    position: relative;
+    width: 82px;
+    height: 34px;
+}
+.second_sub [type="file"]{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
