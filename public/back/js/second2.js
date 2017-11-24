@@ -37,22 +37,19 @@ $(function(){
 //    让模态框显示
     $('.second_add_btn').on('click',function(){
         $('#second_addModal').modal('show');
-    });
+        $.ajax({
+            type:'get',
+            url:'/category/queryTopCategoryPaging',
+            data:{
+                page:1,
+                pageSize:100
+            },
+            success:function(data){
 
-//    让一级分类下拉框显示
-    $('.first_btn').on('click',function(){})
-    $.ajax({
-        type:'get',
-        url:'/category/queryTopCategoryPaging',
-        data:{
-            page:1,
-            pageSize:100
-        },
-        success:function(data){
+                $('.dropdown-menu').html(template('first-tpl',data));
 
-            $('.dropdown-menu').html(template('first-tpl',data));
-
-        }
+            }
+        });
     });
 //    点击一级菜单内容时，让其显示在上面
     $('.dropdown-menu').on('click','a',function(){

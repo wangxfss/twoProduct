@@ -36,10 +36,6 @@ $(function(){
     //模态框显示
     $('.second_add_btn').on('click',function(){
         $('#second_addModal').modal('show');
-    });
-
-    //点击下拉框出现
-    $('.first_btn').on('click',function(){
         $.ajax({
             type:'get',
             url:'/category/queryTopCategoryPaging',
@@ -51,7 +47,7 @@ $(function(){
                 // console.log(data);
                 $('.dropdown-menu').html(template('first-tpl',data));
             }
-        })
+        });
     });
     //点击一级目录子菜单，让其显示
     $('.dropdown-menu').on('click','a',function(){
