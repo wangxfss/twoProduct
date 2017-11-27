@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+
+html,body{
+    height: 100%;
+}
+
+
+.lt-container{
+    height: 100%;
+    max-width: 640px;
+    min-width: 320px;
+    margin:0 auto;
+    background-color: #fff;
+    padding-top:45px;
+    padding-bottom: 85px;
+}
+.lt-header{
+    width: 100%;
+    height: 45px;
+    background-color: #069;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.lt-header a{
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    position: absolute;
+    top: 0px;
+    color: #fff;
+}
+.lt-header .header-l a{
+
+    left: 0px;
+}
+.lt-header .header-r a{
+    right: 0px;
+}
+.lt-header .header-c h4{
+    padding: 0;
+    margin:0;
+    color: #fff;
+    font-weight: 400;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+}
+
+/*主题部分*/
+.lt-main{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/*底部*/
+.lt-footer{
+    width: 100%;
+    height: 55px;
+    background-color: #069;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.lt-footer ul li{
+    float: left;
+    width: 25%;
+    height: 55px;
+    padding-top:10px;
+    text-align: center;
+}
+.lt-footer ul li a{
+    color:#fff;
+}
+.lt-footer ul li p{
+    margin: 0;
+    color: #fff;
+    font-size: 12px;
+}
+.lt-footer ul li.now a{
+    color:darkorange;
+}
+.lt-footer ul li.now a p{
+    color:darkorange;
+}
+
+/*搜索页和商品展示页*/
+.lt-search{
+    padding: 10px;
+    position: relative;
+}
+.lt-search .search-input{
+    height: 34px;
+    border-radius: 5px;
+    border-color: #007aff;
+    font-size: 12px;
+    margin: 0;
+}
+.lt-search .search-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.product{
+    padding:0 10px;
+}
+.product ul li {
+    width: 48%;
+    float: left;
+    text-align: center;
+    box-shadow: 0 0 5px #ccc;
+    margin-top: 10px;
+    padding: 10px 5px;
+}
+.product ul li:nth-child(odd){
+    margin-right: 4%;
+}
+.product ul li img a{
+    display: block;
+    width: 100%;
+
+}
+.product ul li img{
+    width: 100%;
+    display: block;
+}
+.product ul li a>span{
+    color: #007aff;
+    font-size: 14px;
+    display: -webkit-box;
+    overflow: hidden;
+    white-space: normal !important;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.product ul li a p{
+    text-align: center;
+    color: red;
+    font-size: 12px;
+    text-align: center;
+
+}
+.product ul li a span:last-child{
+    color: grey;
+    text-decoration: line-through;
+}

@@ -159,9 +159,9 @@ $(function(){
 
         e.preventDefault();
         var listData = $form.serialize();
-        listData += "&picName1" + imgs[0].picName + 'picAddr1' + imgs[0].picAddr;
-        listData += "&picName2" + imgs[0].picName + 'picAddr2' + imgs[0].picAddr;
-        listData += "&picName3" + imgs[0].picName + 'picAddr3' + imgs[0].picAddr;
+        listData += "&picName1=" + imgs[0].picName + '&picAddr1=' + imgs[0].picAddr;
+        listData += "&picName2=" + imgs[1].picName + '&picAddr2=' + imgs[1].picAddr;
+        listData += "&picName3=" + imgs[2].picName + '&picAddr3=' + imgs[2].picAddr;
 
         $.ajax({
             type:'post',

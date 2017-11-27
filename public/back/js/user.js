@@ -33,7 +33,7 @@ $(function(){
     $("tbody").on('click','.btn',function(){
         // console.log('哈哈');
         var id = $(this).parent().data("id");
-        var isDelete = $(this).hasClass("btn-danger") ? 1:0;
+        var isDelete = $(this).hasClass("btn-danger") ? 0:1;
 
         //让模态框显示
         $("#userModal").modal("show");
