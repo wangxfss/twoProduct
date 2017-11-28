@@ -1,0 +1,39 @@
+1、mui 中有下拉刷新功能、但是文档有问题，结束刷新功能实现： mui('.lt-main').pullRefresh().endPulldownToRefresh();
+	重新刷新：mui('.lt-main').pullRefresh().pulldownLoading();
+	注意：使用了加载事件以后，click事件就会失效，可以使用 mui 提供的tap事件  如果是input标签 可以使用change 事件来检测他的状态
+	
+2、dataset：属性允许无论是在读取模式和写入模式下访问在 HTML或 DOM中的元素上设置的所有自定义数据属性(data-*)集。
+	    它是一个DOMString的映射，每个自定义数据属性的一个条目
+	     语法：string = element.dataset.camelCasedName;
+		   element.dataset.camelCasedName = string;	
+
+3、replace：replace() 方法返回一个由替换值替换一些或所有匹配的模式后的新字符串。模式可以是一个字符串或者一个正则表达式, 替换值可以是一个字符串或者一个每次匹配都要调用的函数。
+	    注意：原字符串不会改变。
+	    语法：str.replace(regexp|substr, newSubStr|function)
+	    regexp (pattern)
+	       一个RegExp 对象或者其字面量。该正则所匹配的内容会被第二个参数的返回值替换掉。
+	    substr (pattern)
+		一个要被 newSubStr 替换的字符串。其被视为一整个字符串，而不是一个正则表达式。仅仅是第一个匹配会被替换。
+	    newSubStr (replacement)
+ 		用于替换掉第一个参数在原字符串中的匹配部分的字符串。该字符串中可以内插一些特殊的变量名。参考下面的使用字符串作为参数。
+	   function (replacement)
+		一个用来创建新子字符串的函数，该函数的返回值将替换掉第一个参数匹配到的结果。参考下面的指定一个函数作为参数。
+
+4、toFixed(num) 设置小数点的保留位数
+
+5、巧用自定义属性 必须知道 attr prop 使用的区别  各种选择器的熟练使用，可以给代码带来很大的方便 
+	学会使用 addClass removeClass 
+6、location对象的方法的使用，这里主要用到了，location.search  location.href
+7、history 对象的方法回顾，项目中主要用到了 history.go(-1)/history.back;
+8、字符串和数组的方法的使用
+9、当现在在  购物车页面时 没有登录，点击登录后调到登录页面， 登陆后如何跳回到  原来页面
+		在购物车页面：location.href = 'login.html?retUrl='+location.href;
+		在登录页面：
+		var search = location.search;
+                    if(search.indexOf('retUrl') != -1){
+                        search = search.replace('?retUrl=','');
+                        location.href = search;
+                    }else{
+                        location.href = 'user.html';
+                    }
+
